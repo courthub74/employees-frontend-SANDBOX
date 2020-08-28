@@ -29,14 +29,14 @@
 		<!-- {{ employee1 }} -->
 
 
-		{% for key in employee1 %}
-
-			
-			<ul class="list-group">
-			  <li class="list-group-item">{{ key }}: {{ employee1 }}</li>
+		<ul class="list-group">
+			  <li class="list-group-item">Employee ID: {{ employee1.idcode }}</li>
+			  <li class="list-group-item">Name: {{ employee1.name }}</li>
+			  <li class="list-group-item">Employment type: {{ employee1.emptype }}</li>
+			  <li class="list-group-item">Employment status: {{ employee1.empstatus }}</li>
+			  <li class="list-group-item">Date Joined: {{ employee1.datejoin }}</li>
 			</ul>
-						
-		{% endfor %}
+					
 
 
 {% endblock %}
