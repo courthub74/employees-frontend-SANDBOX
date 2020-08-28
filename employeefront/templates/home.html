@@ -24,13 +24,15 @@
 
 		<hr>
 
+		{{ quote }}
+
 		<!-- {{ employee }} -->
 
 
-		{% for key in employee %}
+		<!-- {% for key in employee %} -->
 
 			<!-- {{ key }} -->
-			<ul class="list-group">
+			<!-- <ul class="list-group">
 			  <li class="list-group-item">Employee {{ key.id }}</li>
 			  <li class="list-group-item"><b>ID Number:</b> {{ key.idcode }}</li>
 			  <li class="list-group-item"><b>Name:</b> {{ key.name }}</li>
@@ -38,27 +40,9 @@
 			  <li class="list-group-item"><b>Date Joined:</b> {{ key.datejoin }}</li>
 			  <li class="list-group-item"><b>Job Description:</b> {{ key.jobdescrp }}</li>
 			  <li class="list-group-item"><b>Branch:</b> {{ key.branch }}</li>
-			</ul>
+			</ul> -->
 						
-			
-			
-
-		{% endfor %}
-
-		<!-- {% for x in employee %}
-
-			<ul class="list-group">
-			  <li class="list-group-item">{{ x.idcode}}</li>
-			  <li class="list-group-item">{{ x.name }}</li>
-			  <li class="list-group-item">{{ x.emptype }}</li>
-			  <li class="list-group-item">{{ x.empstatus }}</li>
-			  <li class="list-group-item">{{ x.datejoin }}</li>
-			  <li class="list-group-item">{{ x.jobdescrp }}</li>
-			  <li class="list-group-item">{{ x.branch }}</li>
-			</ul>
-			
-
-		{% endfor %} -->
+		<!-- {% endfor %} -->
 
 
 {% endblock %}
