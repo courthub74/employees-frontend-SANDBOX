@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<br><br>
+
+<div class="col-md-6 offset-md-3">
+	<div><h4>NexCour Employee Registry</h4></div>
+		<br><br>
+
+
+		<form method="POST">
+		  <div class="form-row">
+		    <div class="col">
+		    	{% csrf_token %}
+		      <input type="text" class="form-control" placeholder="Enter ID Number or Name" name="quote">
+		    	
+		    </div>
+		    <div class="col">
+		      <button type="submit" class="btn btn-primary">Submit</button>
+		    </div>
+		  </div>
+		</form>
+
+		<hr>
+
+		<!-- {{ employee }} -->
+
+
+		{% for key in employee %}
+
+			<!-- {{ key }} -->
+			<ul class="list-group">
+			  <li class="list-group-item">Employee {{ key.id }}</li>
+			  <li class="list-group-item"><b>ID Number:</b> {{ key.idcode }}</li>
+			  <li class="list-group-item"><b>Name:</b> {{ key.name }}</li>
+			  <li class="list-group-item"><b>Employment Type:</b> {{ key.emptype }}</li>
+			  <li class="list-group-item"><b>Date Joined:</b> {{ key.datejoin }}</li>
+			  <li class="list-group-item"><b>Job Description:</b> {{ key.jobdescrp }}</li>
+			  <li class="list-group-item"><b>Branch:</b> {{ key.branch }}</li>
+			</ul>
+						
+			
+			
+
+		{% endfor %}
+
+		<!-- {% for x in employee %}
+
+			<ul class="list-group">
+			  <li class="list-group-item">{{ x.idcode}}</li>
+			  <li class="list-group-item">{{ x.name }}</li>
+			  <li class="list-group-item">{{ x.emptype }}</li>
+			  <li class="list-group-item">{{ x.empstatus }}</li>
+			  <li class="list-group-item">{{ x.datejoin }}</li>
+			  <li class="list-group-item">{{ x.jobdescrp }}</li>
+			  <li class="list-group-item">{{ x.branch }}</li>
+			</ul>
+			
+
+		{% endfor %} -->
+
+
+{% endblock %}
+
+
