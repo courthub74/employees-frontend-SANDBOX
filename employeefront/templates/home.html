@@ -2,44 +2,50 @@
 
 {% block content %}
 
-	<br><br>
 
-<div class="col-md-6 offset-md-3">
-	<div><h4>NexCour Employee Registry</h4></div>
-		<br><br>
-
-
-		<form method="POST">
-		  <div class="form-row">
-		    <div class="col">
-		    	{% csrf_token %}
-		      <input type="text" class="form-control" placeholder="Enter ID Number or Name" name="quote">
-		    	
-		    </div>
-		    <div class="col">
-		      <button type="submit" class="btn btn-primary">Submit</button>
-		    </div>
-		  </div>
-		</form>
-
-		<hr><br>
+	<style type="text/css">
+		.banner {
+			position: absolute;
+			right: 25px;
+			left: auto;
+		}
+	</style>
 
 
+		{% if nothingyet %}
 
-		<!-- {{ employee1 }} -->
+			<h4> {{ nothingyet }}</h4>
+			<img class="banner" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwp-user-uploads-prod.s3-ap-southeast-2.amazonaws.com%2Fapp%2Fuploads%2F2015%2F05%2FInformation-Technology_banner-2.jpg&f=1&nofb=1" width="1000" height="300"><br><br><br>
+			<h4> {{ nothingyet }}</h4>
+		
 
+		{% else %}
+
+			{% if direct1.Response %}
+
+				<div class="media media-bordered">
+				  <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwp-user-uploads-prod.s3-ap-southeast-2.amazonaws.com%2Fapp%2Fuploads%2F2015%2F05%2FInformation-Technology_banner-2.jpg&f=1&nofb=1" class="mr-3" alt="NexCour">
+				  <div class="media-body">
+				    <h1 class="mt-0">Sorry,</h1>
+				    <h3><span class="badge badge-warning"> <b>{{ quote }}</b> </span> That Employee doesn't exist. Please Try Again.....</h3>
+				  </div>
+				</div>
+
+			{% endif %}
 
 		<ul class="list-group">
 			  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
-			  <li class="list-group-item"><b>Name:</b> {{ employee1.name }}</li>
-			  <li class="list-group-item"><b>Employee ID:</b> {{ employee1.idcode }}</li>
-			  <li class="list-group-item"><b>Employment type:</b> {{ employee1.emptype }}</li>
-			  <li class="list-group-item"><b>Employment status:</b> {{ employee1.empstatus }}</li>
-			  <li class="list-group-item"><b>Date Joined:</b> {{ employee1.datejoin }}</li>
-			  <li class="list-group-item"><b>Job Description:</b> {{ employee1.jobdescrp }}</li>
-			  <li class="list-group-item"><b>Branch:</b> {{ employee1.branch }}</li>
+			  <li class="list-group-item"><b>Name:</b> {{ direct1.name }}</li>
+			  <li class="list-group-item"><b>Employee ID:</b> {{ direct1.idcode }}</li>
+			  <li class="list-group-item"><b>Employment type:</b> {{ direct1.emptype }}</li>
+			  <li class="list-group-item"><b>Employment status:</b> {{ direct1.empstatus }}</li>
+			  <li class="list-group-item"><b>Date Joined:</b> {{ direct1.datejoin }}</li>
+			  <li class="list-group-item"><b>Job Description:</b> {{ direct1.jobdescrp }}</li>
+			  <li class="list-group-item"><b>Branch:</b> {{ direct1.branch }}</li>
 			</ul>
-					
+
+		{% endif %}
+
 
 
 {% endblock %}

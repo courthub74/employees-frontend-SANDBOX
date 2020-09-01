@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+	<style type="text/css">
+		.background {
+		  position: absolute;
+		  left: 0px;
+		  top: 0px;
+		  z-index: -1;
+		}
+	</style>
+
+
+		{% if nothingyet %}
+
+			<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwp-user-uploads-prod.s3-ap-southeast-2.amazonaws.com%2Fapp%2Fuploads%2F2015%2F05%2FInformation-Technology_banner-2.jpg&f=1&nofb=1" width="1000" height="300">
+			<h4> {{ nothingyet }}</h4>
+		
+
+		{% else %}
+
+			{% if direct1.Response %}
+
+				<div class="media media-bordered">
+				  <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwp-user-uploads-prod.s3-ap-southeast-2.amazonaws.com%2Fapp%2Fuploads%2F2015%2F05%2FInformation-Technology_banner-2.jpg&f=1&nofb=1" class="mr-3" alt="NexCour">
+				  <div class="media-body">
+				    <h1 class="mt-0">Sorry,</h1>
+				    <h3><span class="badge badge-warning"> <b>{{ quote }}</b> </span> That Employee doesn't exist. Please Try Again.....</h3>
+				  </div>
+				</div>
+
+			{% endif %}
+
+		<ul class="list-group">
+			  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
+			  <li class="list-group-item"><b>Name:</b> {{ direct2.name }}</li>
+			  <li class="list-group-item"><b>Employee ID:</b> {{ direct2.idcode }}</li>
+			  <li class="list-group-item"><b>Employment type:</b> {{ direct2.emptype }}</li>
+			  <li class="list-group-item"><b>Employment status:</b> {{ direct2.empstatus }}</li>
+			  <li class="list-group-item"><b>Date Joined:</b> {{ direct2.datejoin }}</li>
+			  <li class="list-group-item"><b>Job Description:</b> {{ direct2.jobdescrp }}</li>
+			  <li class="list-group-item"><b>Branch:</b> {{ direct2.branch }}</li>
+			</ul>
+
+		{% endif %}
+
+
+
+{% endblock %}
+
+
