@@ -23,11 +23,20 @@ def emp1(request):
 				global direct2
 				direct2 = json.loads(employee2.content)
 				return render(request, 'home2.html', {'quote': quote, 'direct2': direct2})
+
+			if quote == "10001407":
+				employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/3/?format=json")
+				global direct3
+				direct3 = json.loads(employee3.content)
+				return render(request, 'home3.html', {'quote': quote, 'direct3': direct3})
 			
 
 	else:
 		nothingyet = "NexCour Employees List Goes Here..."
 		return render(request, 'home.html', {'nothingyet': nothingyet})
+
+
+
 
 
 # #HOME
