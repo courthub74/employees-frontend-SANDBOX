@@ -22,8 +22,19 @@
 		{% else %}
 
 
+			{% if error1 %}
 
-			{% if direct1 %}
+				<div class="media media-bordered">
+				  <div class="media-body">
+				    
+				    <h3><span class="badge badge-primary"><b>{{ quote }}</b></span> is not in the NexCour Registry</h3>
+				  </div>
+				</div>
+
+			{% endif %}
+
+
+			<!-- {% if direct1 %}
 
 			<ul class="list-group">
 				  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
@@ -36,7 +47,7 @@
 				  <li class="list-group-item"><b>Branch:</b> {{ direct1.branch }}</li>
 				</ul>
 
-			{% endif %}
+			{% endif %} -->
 
 		{% endif %}
 
