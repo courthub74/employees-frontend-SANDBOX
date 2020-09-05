@@ -8,15 +8,22 @@
 			position: absolute;
 			right: 25px;
 			left: auto;
-		}
-
+			}
+		.center {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 100%;
+			}
 	</style>
 
 
 		{% if nothingyet %}
 
-			<h2> {{ nothingyet }}</h2>
-			<img class="banner" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwp-user-uploads-prod.s3-ap-southeast-2.amazonaws.com%2Fapp%2Fuploads%2F2015%2F05%2FInformation-Technology_banner-2.jpg&f=1&nofb=1" width="1000" height="300"><hr>
+		<div class="center">
+			<h5> {{ nothingyet }}</h5>
+			<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwp-user-uploads-prod.s3-ap-southeast-2.amazonaws.com%2Fapp%2Fuploads%2F2015%2F05%2FInformation-Technology_banner-2.jpg&f=1&nofb=1" width="800" height="150">
+		</div>
 
 
 		{% else %}
