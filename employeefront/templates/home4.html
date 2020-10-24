@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load static %}
+
 
 	<style type="text/css">
 		.background {
@@ -24,7 +26,7 @@
 
 		<ul class="list-group">
 			  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
-			  <img src="{{ direct4.photo }}" height="500" width="500"></li>
+			  <img src="{% static 'Photos/DevFull.jpg' %}" height="500" width="707">
 			  <li class="list-group-item"><b>Name:</b> {{ direct4.name }}</li>
 			  <li class="list-group-item"><b>Employee ID:</b> {{ direct4.idcode }}</li>
 			  <li class="list-group-item"><b>Employment type:</b> {{ direct4.emptype }}</li>
