@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load static %}
+
 
 	<style type="text/css">
 		.banner {
@@ -31,10 +33,11 @@
 
 
 			{% if direct1 %}
+			{% load static %}
 
 			<ul class="list-group">
 				  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
-				  <img src="{{ direct1.photo }}"></li>
+				  <img src="{% static 'Photos/Head1.jpeg' %}"></li>
 				  <li class="list-group-item"><b>Name:</b> {{ direct1.name }}</li>
 				  <li class="list-group-item"><b>Employee ID:</b> {{ direct1.idcode }}</li>
 				  <li class="list-group-item"><b>Employment type:</b> {{ direct1.emptype }}</li>
