@@ -10,60 +10,83 @@ def emp1(request):
 	if request.method == 'POST':
 		quote = request.POST['quote'] 
 
-		if quote == "10001401":
-			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/1/?format=json")
+		# By ID #
+		if quote == "10002101":
+			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
 			global direct1
 			direct1 = json.loads(employee1.content) 
 			return render(request, 'home.html', {'quote': quote, 'direct1': direct1})
 
-		if quote == "James Henry":
-			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/1/?format=json")
+		# By Name
+		if quote == "Tim Flurry":
+			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
 			direct1 = json.loads(employee1.content)
-			return render(request, 'home.html', {'quote': quote, 'direct1': direct1})	
+			return render(request, 'home.html', {'quote': quote, 'direct1': direct1})
+
+		# By Job Titls
+		if quote == "CEO":
+			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
+			direct1 = json.loads(employee1.content)
+			return render(request, 'home.html', {'quote': quote, 'direct1': direct1})		
 
 
 	#############################################################################################################	
 
-		if quote == "10001404":
-			employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/2/?format=json")
+		if quote == "10002102":
+			employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/17/?format=json")
 			global direct2
 			direct2 = json.loads(employee2.content)
 			return render(request, 'home2.html', {'quote': quote, 'direct2': direct2})
 
-		if quote == "Debbie Michaels":
-			employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/2/?format=json")
+		if quote == "Samantha Mitchell":
+			employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/17/?format=json")
+			direct2 = json.loads(employee2.content)
+			return render(request, 'home2.html', {'quote': quote, 'direct2': direct2})
+
+		if quote == "COO":
+			employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/17/?format=json")
 			direct2 = json.loads(employee2.content)
 			return render(request, 'home2.html', {'quote': quote, 'direct2': direct2})
 
 	#############################################################################################################	
 
-		if quote == "10001407":
-			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/3/?format=json")
+		if quote == "10002103":
+			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/18/?format=json")
 			global direct3
 			direct3 = json.loads(employee3.content)
 			return render(request, 'home3.html', {'quote': quote, 'direct3': direct3})
 
-		if quote == "DeSean Timms":
-			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/3/?format=json")
+		if quote == "John Golany":
+			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/18/?format=json")
+			direct3 = json.loads(employee3.content)
+			return render(request, 'home3.html', {'quote': quote, 'direct3': direct3})
+
+		if quote == "CTO":
+			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/18/?format=json")
 			direct3 = json.loads(employee3.content)
 			return render(request, 'home3.html', {'quote': quote, 'direct3': direct3})
 
 	#############################################################################################################	
 
-		if quote == "10001410":
-			employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/4/?format=json")
+		if quote == "10002104":
+			employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/19/?format=json")
 			global direct4
 			direct4 = json.loads(employee4.content)
 			return render(request, 'home4.html', {'quote': quote, 'direct4': direct4})
 
-		if quote == "Brittany Samuels":
-			employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/4/?format=json")
+		if quote == "Alexhander Vosiv":
+			employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/19/?format=json")
+			direct4 = json.loads(employee4.content)
+			return render(request, 'home4.html', {'quote': quote, 'direct4': direct4})
+
+		if quote == "Lead Developer":
+			employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/19/?format=json")
 			direct4 = json.loads(employee4.content)
 			return render(request, 'home4.html', {'quote': quote, 'direct4': direct4})
 
 	#############################################################################################################	
 
-		if quote == "10001413":
+		if quote == "10002105":
 			employee5 = requests.get("http://nexcouremployees.courdevelops.com/employees/5/?format=json")
 			global direct5
 			direct5 = json.loads(employee5.content)
