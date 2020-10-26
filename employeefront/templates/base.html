@@ -39,6 +39,9 @@
                   .longer {
                     size: 20px;
                   }
+                  .big{
+                      width: 345px;
+                  }
                 </style>
 
             <div class="col-md-5 offset-md-4 center">
@@ -49,8 +52,10 @@
 
                     <div class="col">
                       {% csrf_token %}
-                      <input type="text" class="form-control" placeholder="Enter: ID# | Name | Job Title or Dept." name="quote" autocomplete="off">
+                      <input type="text" class="form-control big" placeholder="Enter: ID# | Name | Job Title or Dept." name="quote" autocomplete="off"><br>
                     </div>
+
+
 
                     <div class="col">
                       <button type="submit" class="btn btn-primary">Submit</button>
@@ -71,6 +76,8 @@
                   </button>
                   {{ message }}
             </div>
+          </div>
+        </div>
               {% endfor %}
             {% endif %}
 
