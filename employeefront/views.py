@@ -178,6 +178,75 @@ def emp1(request):
 			direct8 = json.loads(employee8.content)
 			return render(request, 'home8.html', {'quote': quote, 'direct8': direct8})
 
+
+	#############################################################################################################
+
+		# By ID #
+		if quote == "10002217":
+			employee9 = requests.get("http://nexcouremployees.courdevelops.com/employees/25/?format=json")
+			global direct9
+			direct9 = json.loads(employee9.content)
+			return render(request, 'home9.html', {'quote': quote, 'direct9': direct9})
+
+		# By Name
+		if quote == "Khary Stars":
+			employee9 = requests.get("http://nexcouremployees.courdevelops.com/employees/25/?format=json")
+			direct9 = json.loads(employee9.content)
+			return render(request, 'home9.html', {'quote': quote, 'direct9': direct9})
+
+		# By Job Title
+		if quote == "Front-end Development":
+			employee9 = requests.get("http://nexcouremployees.courdevelops.com/employees/25/?format=json")
+			direct9 = json.loads(employee9.content)
+			return render(request, 'home9.html', {'quote': quote, 'direct9': direct9})
+
+
+	#############################################################################################################
+
+		# By ID #
+		if quote == "10002218":
+			employee10 = requests.get("http://nexcouremployees.courdevelops.com/employees/26/?format=json")
+			global direct10
+			direct10 = json.loads(employee10.content)
+			return render(request, 'home10.html', {'quote': quote, 'direct10': direct10})
+
+		# By Name
+		if quote == "Mark Thompson":
+			employee10 = requests.get("http://nexcouremployees.courdevelops.com/employees/26/?format=json")
+			direct10 = json.loads(employee10.content)
+			return render(request, 'home10.html', {'quote': quote, 'direct10': direct10})
+
+
+		# By Job Title
+		if quote == "Junior Full Stack":
+			employee10 = requests.get("http://nexcouremployees.courdevelops.com/employees/26/?format=json")
+			direct10 = json.loads(employee10.content)
+			return render(request, 'home10.html', {'quote': quote, 'direct10': direct10})
+
+
+	#############################################################################################################
+
+		# By ID #
+		if quote == "10002219":
+			employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
+			global direct11
+			direct11 = json.loads(employee11.content)
+			return render(request, 'home11.html', {'quote': quote, 'direct11': direct11})
+
+		# By Name
+		if quote == "Rebecca Moley":
+			employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
+			direct11 = json.loads(employee11.content)
+			return render(request, 'home11.html', {'quote': quote, 'direct11': direct11})
+
+
+		# By Job Title
+		if quote == "Junior Front-end":
+			employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
+			direct11 = json.loads(employee11.content)
+			return render(request, 'home11.html', {'quote': quote, 'direct11': direct11})
+
+
 	#############################################################################################################
 
 	# ERROR page

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+
+	<style type="text/css">
+		.background {
+		  position: absolute;
+		  left: 0px;
+		  top: 0px;
+		  z-index: -1;
+		}
+	</style>
+
+
+		{% if nothingyet %}
+
+			<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwp-user-uploads-prod.s3-ap-southeast-2.amazonaws.com%2Fapp%2Fuploads%2F2015%2F05%2FInformation-Technology_banner-2.jpg&f=1&nofb=1" width="1000" height="300">
+			<h4> {{ nothingyet }}</h4>
+		
+
+		{% else %}
+
+
+		<ul class="list-group">
+			  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
+			  <img src="{% static 'Photos/Dev10.jpg' %}" height="500">
+			  <li class="list-group-item"><b>Name:</b> {{ direct10.name }}</li>
+			  <li class="list-group-item"><b>Employee ID:</b> {{ direct10.idcode }}</li>
+			  <li class="list-group-item"><b>Employment type:</b> {{ direct10.emptype }}</li>
+			  <li class="list-group-item"><b>Employment status:</b> {{ direct10.empstatus }}</li>
+			  <li class="list-group-item"><b>Date Joined:</b> {{ direct10.datejoin }}</li>
+			  <li class="list-group-item"><b>Job Description:</b> {{ direct10.jobdescrp }}</li>
+			  <li class="list-group-item"><b>Branch:</b> {{ direct10.branch }}</li>
+			</ul>
+
+			<br>
+
+		{% endif %}
+
+
+
+{% endblock %}
+
