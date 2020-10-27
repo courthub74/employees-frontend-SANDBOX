@@ -229,7 +229,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002219":
 			employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
-			global direct11
+			#global direct11
 			direct11 = json.loads(employee11.content)
 			return render(request, 'home11.html', {'quote': quote, 'direct11': direct11})
 
@@ -247,6 +247,55 @@ def emp1(request):
 			return render(request, 'home11.html', {'quote': quote, 'direct11': direct11})
 
 
+
+
+	#############################################################################################################
+
+		# By ID #
+		if quote == "10003201":
+			employee12 = requests.get("http://nexcouremployees.courdevelops.com/employees/28/?format=json")
+			# global direct12
+			direct12 = json.loads(employee12.content)
+			return render(request, 'home12.html', {'quote': quote, 'direct12': direct12})
+
+		# By Name
+		if quote == "Emily Rickets":
+			employee12 = requests.get("http://nexcouremployees.courdevelops.com/employees/28/?format=json")
+			direct12 = json.loads(employee12.content)
+			return render(request, 'home12.html', {'quote': quote, 'direct12': direct12})
+
+
+		# By Job Title
+		if quote == "CFO":
+			employee12 = requests.get("http://nexcouremployees.courdevelops.com/employees/28/?format=json")
+			direct12 = json.loads(employee12.content)
+			return render(request, 'home12.html', {'quote': quote, 'direct12': direct12})
+
+
+	#############################################################################################################
+
+		# By ID #
+		if quote == "10003202":
+			employee13 = requests.get("http://nexcouremployees.courdevelops.com/employees/29/?format=json")
+			# global direct12
+			direct13 = json.loads(employee13.content)
+			return render(request, 'home13.html', {'quote': quote, 'direct13': direct13})
+
+		# By Name
+		if quote == "Jamila Vaughn":
+			employee13 = requests.get("http://nexcouremployees.courdevelops.com/employees/29/?format=json")
+			direct13 = json.loads(employee13.content)
+			return render(request, 'home13.html', {'quote': quote, 'direct13': direct13})
+
+
+		# By Job Title
+		if quote == "CCO":
+			employee13 = requests.get("http://nexcouremployees.courdevelops.com/employees/29/?format=json")
+			direct13 = json.loads(employee13.content)
+			return render(request, 'home13.html', {'quote': quote, 'direct13': direct13})
+
+
+
 	#############################################################################################################
 
 	# ERROR page
@@ -258,7 +307,7 @@ def emp1(request):
 	#############################################################################################################
 		
 	else:
-		nothingyet = "NexCour Employee information:"
+		nothingyet = "NexCour Employee Database:"
 		# For Portfolio just say:  These particular employees work for this ficticious company.  Enter either their ID or Name to get more info
 		return render(request, 'home.html', {'nothingyet': nothingyet})
 
