@@ -295,7 +295,6 @@ def emp1(request):
 			return render(request, 'home13.html', {'quote': quote, 'direct13': direct13})
 
 
-
 	#############################################################################################################
 
 	# ERROR page

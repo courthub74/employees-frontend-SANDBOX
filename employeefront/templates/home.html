@@ -40,7 +40,7 @@
 
 
 			{% if direct1 %}
-			{% load static %}
+			
 
 			<ul class="list-group">
 				  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
@@ -53,6 +53,10 @@
 				  <li class="list-group-item"><b>Job Description:</b> {{ direct1.jobdescrp }}</li>
 				  <li class="list-group-item"><b>Branch:</b> {{ direct1.branch }}</li>
 				</ul>
+
+				<br>
+
+				<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
 
 				<br><br>
 

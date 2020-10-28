@@ -26,7 +26,7 @@
 
 		<ul class="list-group">
 			  <li class="list-group-item list-group-item-primary"><b>NexCour Employee</b></li>
-			  <img src="{% static 'Photos/DevFull.jpg' %}" height="300" width="707">
+			  <img src="{% static 'Photos/DevFull.jpg' %}" height="300">
 			  <li class="list-group-item"><b>Name:</b> {{ direct4.name }}</li>
 			  <li class="list-group-item"><b>Employee ID:</b> {{ direct4.idcode }}</li>
 			  <li class="list-group-item"><b>Employment type:</b> {{ direct4.emptype }}</li>
@@ -37,6 +37,10 @@
 			</ul>
 
 			<br>
+
+			<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+
+				<br><br>
 
 		{% endif %}
 
