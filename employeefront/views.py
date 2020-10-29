@@ -297,6 +297,49 @@ def emp1(request):
 
 	#############################################################################################################
 
+		# By ID #
+		if quote == "10003203":
+			employee14 = requests.get("http://nexcouremployees.courdevelops.com/employees/30/?format=json")
+			# global direct12
+			direct14 = json.loads(employee14.content)
+			return render(request, 'home14.html', {'quote': quote, 'direct14': direct14})
+
+		# By Name
+		if quote == "Brenda Martani":
+			employee14 = requests.get("http://nexcouremployees.courdevelops.com/employees/30/?format=json")
+			direct14 = json.loads(employee14.content)
+			return render(request, 'home14.html', {'quote': quote, 'direct14': direct14})
+
+		# By Job Title
+		if quote == "CISO":
+			employee14 = requests.get("http://nexcouremployees.courdevelops.com/employees/30/?format=json")
+			direct14 = json.loads(employee14.content)
+			return render(request, 'home14.html', {'quote': quote, 'direct14': direct14})
+
+	#############################################################################################################
+	
+		# By ID #
+		if quote == "10003204":
+			employee15 = requests.get("http://nexcouremployees.courdevelops.com/employees/31/?format=json")
+			# global direct12
+			direct15 = json.loads(employee15.content)
+			return render(request, 'home15.html', {'quote': quote, 'direct15': direct15})
+
+		# By Name
+		if quote == "Mai Fontana":
+			employee15 = requests.get("http://nexcouremployees.courdevelops.com/employees/31/?format=json")
+			direct15 = json.loads(employee15.content)
+			return render(request, 'home15.html', {'quote': quote, 'direct15': direct15})
+
+		# By Job Title
+		if quote == "CMO":
+			employee15 = requests.get("http://nexcouremployees.courdevelops.com/employees/31/?format=json")
+			direct15 = json.loads(employee15.content)
+			return render(request, 'home15.html', {'quote': quote, 'direct15': direct15})
+
+
+	#############################################################################################################
+
 	# ERROR page
 
 		else:

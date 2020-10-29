@@ -23,17 +23,19 @@
 
 		{% else %}
 
+		
+
 
 		<ul class="list-group">
 			  <li class="list-group-item list-group-item-primary"><b>NexCour Personnel</b></li>
-			  <img src="{% static 'Photos/Dev2.jpg' %}" height="300">
-			  <li class="list-group-item"><b>Name:</b> {{ direct8.name }}</li>
-			  <li class="list-group-item"><b>Employee ID:</b> {{ direct8.idcode }}</li>
-			  <li class="list-group-item"><b>Employment type:</b> {{ direct8.emptype }}</li>
-			  <li class="list-group-item"><b>Employment status:</b> {{ direct8.empstatus }}</li>
-			  <li class="list-group-item"><b>Date Joined:</b> {{ direct8.datejoin }}</li>
-			  <li class="list-group-item"><b>Job Description:</b> {{ direct8.jobdescrp }}</li>
-			  <li class="list-group-item"><b>Branch:</b> {{ direct8.branch }}</li>
+			  <img src="{% static 'Photos/dev7.jpg' %}" height="300">
+			  <li class="list-group-item"><b>Name:</b> {{ direct15.name }}</li>
+			  <li class="list-group-item"><b>Employee ID:</b> {{ direct15.idcode }}</li>
+			  <li class="list-group-item"><b>Employment type:</b> {{ direct15.emptype }}</li>
+			  <li class="list-group-item"><b>Employment status:</b> {{ direct15.empstatus }}</li>
+			  <li class="list-group-item"><b>Date Joined:</b> {{ direct15.datejoin }}</li>
+			  <li class="list-group-item"><b>Job Description:</b> {{ direct15.jobdescrp }}</li>
+			  <li class="list-group-item"><b>Branch:</b> {{ direct15.branch }}</li>
 			</ul>
 
 			<br>
@@ -41,6 +43,8 @@
 			<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
 
 				<br><br>
+
+	
 
 		{% endif %}
 
