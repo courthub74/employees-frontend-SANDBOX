@@ -152,7 +152,7 @@ def emp1(request):
 			return render(request, 'home7.html', {'quote': quote, 'direct7': direct7})	
 
 		# By Job Title	
-		if quote == "Front-end Development":
+		if quote == "Front-end Design":
 			employee7 = requests.get("http://nexcouremployees.courdevelops.com/employees/22/?format=json")
 			direct7 = json.loads(employee7.content)
 			return render(request, 'home7.html', {'quote': quote, 'direct7': direct7})	
@@ -317,7 +317,7 @@ def emp1(request):
 			return render(request, 'home14.html', {'quote': quote, 'direct14': direct14})
 
 	#############################################################################################################
-	
+
 		# By ID #
 		if quote == "10003204":
 			employee15 = requests.get("http://nexcouremployees.courdevelops.com/employees/31/?format=json")
