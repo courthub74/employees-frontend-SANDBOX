@@ -2,6 +2,11 @@ from django.shortcuts import render
 from django.contrib import messages
 
 
+#FRONTDOOR
+def frontdoor(request):
+	return render(request, "authenticate/frontdoor.html", {})
+
+
 #HOME
 def emp1(request):
 	import requests
