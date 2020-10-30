@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-# from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 # from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib import messages
 # from .forms import SignUpForm, EditProfileForm
@@ -8,6 +8,11 @@ from django.contrib import messages
 #FRONTDOOR
 def frontdoor(request):
 	return render(request, "authenticate/frontdoor.html", {})
+
+#LOGGED IN
+def logged(request):
+	return render(request, "authenticate/logged.html", {})
+
 
 
 #HOME
@@ -24,19 +29,19 @@ def emp1(request):
 			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
 			global direct1
 			direct1 = json.loads(employee1.content) 
-			return render(request, 'home.html', {'quote': quote, 'direct1': direct1})
+			return render(request, 'home1.html', {'quote': quote, 'direct1': direct1})
 
 		# By Name
 		if quote == "Tim Flurry":
 			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
 			direct1 = json.loads(employee1.content)
-			return render(request, 'home.html', {'quote': quote, 'direct1': direct1})
+			return render(request, 'home1.html', {'quote': quote, 'direct1': direct1})
 
 		# By Job Title
 		if quote == "CEO":
 			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
 			direct1 = json.loads(employee1.content)
-			return render(request, 'home.html', {'quote': quote, 'direct1': direct1})		
+			return render(request, 'home1.html', {'quote': quote, 'direct1': direct1})		
 
 
 	#############################################################################################################	

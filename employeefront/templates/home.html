@@ -34,34 +34,6 @@
 		</div>
 
 
-
-		{% else %}
-
-
-
-			
-			
-
-			<ul class="list-group">
-				  <li class="list-group-item list-group-item-primary"><b>NexCour Personnel</b></li>
-				  <img src="{% static 'Photos/Head1.jpeg' %}" height="300"></li>
-				  <li class="list-group-item"><b>Name:</b> {{ direct1.name }}</li>
-				  <li class="list-group-item"><b>Employee ID:</b> {{ direct1.idcode }}</li>
-				  <li class="list-group-item"><b>Employment type:</b> {{ direct1.emptype }}</li>
-				  <li class="list-group-item"><b>Employment status:</b> {{ direct1.empstatus }}</li>
-				  <li class="list-group-item"><b>Date Joined:</b> {{ direct1.datejoin }}</li>
-				  <li class="list-group-item"><b>Job Description:</b> {{ direct1.jobdescrp }}</li>
-				  <li class="list-group-item"><b>Branch:</b> {{ direct1.branch }}</li>
-				</ul>
-
-				<br>
-
-				<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
-
-				<br><br>
-
-			
-
 		{% endif %}
 
 
