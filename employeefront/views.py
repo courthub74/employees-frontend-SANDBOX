@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
+from django.contrib.auth import authenticate, login
 # from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib import messages
 # from .forms import SignUpForm, EditProfileForm
@@ -7,13 +7,34 @@ from django.contrib import messages
 
 #FRONTDOOR
 def frontdoor(request):
-	return render(request, "authenticate/frontdoor.html", {})
+	if request.method == "POST":
+		username = request.POST['username']
+		password = request.POST['password']
+		user = authenticate(request, username=username, password=password)
+		if user is not None:
+			login(request, user)
+			messages.success(request, ('Successful Login'))
+			return redirect('logged')
+		else:
+			messages.success(request, ('Error Logging In - Please Try Again...'))
+			return redirect('frontdoor')
+	else:
+		return render(request, "authenticate/frontdoor.html", {})
+
+
 
 #LOGGED IN
 def logged(request):
 	return render(request, "authenticate/logged.html", {})
 
 
+#LOGOUT
+def logout_user(request):
+	logout(request)
+	messages.success(request, ('You Have Been Logged Out'))
+	return redirect('frontdoor')
+
+		
 
 #HOME
 def emp1(request):

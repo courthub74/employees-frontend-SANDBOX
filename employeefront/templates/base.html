@@ -14,7 +14,7 @@
 
 
           <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <a class="navbar-brand" href="{% url 'home' %}">NexCour Employee Registry</a>
+            <a class="navbar-brand" href="{% url 'home' %}">NexCour Inc.</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,12 +53,12 @@
                 <form method="POST">
                   <div class="form-row">
 
+                    <h6>Personnel Search:</h6>
+
                     <div class="col">
                       {% csrf_token %}
                       <input type="text" class="form-control big" placeholder="Enter: ID# | Name | Job Title or Dept." name="quote" autocomplete="off"><br>
                     </div>
-
-
 
                     <div class="col">
                       <button type="submit" class="btn btn-lg active btn-primary">Submit</button>
@@ -69,25 +69,18 @@
 
                 <br><br><br>
 
+              {% block content %}
 
-          <div class="container">
-            {% if messages %}
-            {% for message in messages %}
-              <div class="alert alert-primary alert-dismissable" role="alert">
-                 <button class="close" data-dismiss="alert">
-                    <small><sup>x</sup></small>
-                  </button>
-                  {{ message }}
-            </div>
-          </div>
+             
+
+              {% endblock %}
+
         </div>
-              {% endfor %}
-            {% endif %}
 
 
-          {% block content %}
 
-          {% endblock %}
+
+
 
 
 
