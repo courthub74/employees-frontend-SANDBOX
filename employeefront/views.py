@@ -43,7 +43,7 @@ def emp1(request):
 
 	if request.method == 'POST':
 		quote = request.POST['quote'] 
-		quote = quote.upper()
+		
 
 		# By ID #
 		if quote == "10002101":
@@ -60,6 +60,7 @@ def emp1(request):
 
 		# By Job Title
 		if quote == "CEO":
+			quote = quote.upper()
 			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
 			direct1 = json.loads(employee1.content)
 			return render(request, 'home1.html', {'quote': quote, 'direct1': direct1})		
@@ -82,6 +83,7 @@ def emp1(request):
 
 		# By Job Title
 		if quote == "COO":
+			quote = quote.upper()
 			employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/17/?format=json")
 			direct2 = json.loads(employee2.content)
 			return render(request, 'home2.html', {'quote': quote, 'direct2': direct2})
@@ -103,6 +105,7 @@ def emp1(request):
 
 		# By Job Title
 		if quote == "CTO":
+			quote = quote.upper()
 			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/18/?format=json")
 			direct3 = json.loads(employee3.content)
 			return render(request, 'home3.html', {'quote': quote, 'direct3': direct3})
@@ -301,6 +304,7 @@ def emp1(request):
 
 		# By Job Title
 		if quote == "CFO":
+			quote = quote.upper()
 			employee12 = requests.get("http://nexcouremployees.courdevelops.com/employees/28/?format=json")
 			direct12 = json.loads(employee12.content)
 			return render(request, 'home12.html', {'quote': quote, 'direct12': direct12})
@@ -324,6 +328,7 @@ def emp1(request):
 
 		# By Job Title
 		if quote == "CCO":
+			quote = quote.upper()
 			employee13 = requests.get("http://nexcouremployees.courdevelops.com/employees/29/?format=json")
 			direct13 = json.loads(employee13.content)
 			return render(request, 'home13.html', {'quote': quote, 'direct13': direct13})
@@ -346,6 +351,7 @@ def emp1(request):
 
 		# By Job Title
 		if quote == "CISO":
+			quote = quote.upper()
 			employee14 = requests.get("http://nexcouremployees.courdevelops.com/employees/30/?format=json")
 			direct14 = json.loads(employee14.content)
 			return render(request, 'home14.html', {'quote': quote, 'direct14': direct14})
@@ -367,6 +373,7 @@ def emp1(request):
 
 		# By Job Title
 		if quote == "CMO":
+			quote = quote.upper()
 			employee15 = requests.get("http://nexcouremployees.courdevelops.com/employees/31/?format=json")
 			direct15 = json.loads(employee15.content)
 			return render(request, 'home15.html', {'quote': quote, 'direct15': direct15})
