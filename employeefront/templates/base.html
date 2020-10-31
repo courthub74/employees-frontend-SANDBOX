@@ -61,15 +61,15 @@
                 </style>
 
             <div class="col-md-5 offset-md-4 center">
-                <br>
 
+               <h6>Personnel Search:</h6>
+            
                 <form method="POST">
                   <div class="form-row">
-
-                    <h6>Personnel Search:</h6>
-
+                      
                     <div class="col">
                       {% csrf_token %}
+
                       <input type="text" class="form-control big" placeholder="Enter: ID# | Name | Job Title or Dept." name="quote" autocomplete="off"><br>
                     </div>
 
