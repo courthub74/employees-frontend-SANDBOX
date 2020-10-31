@@ -43,7 +43,7 @@ def emp1(request):
 
 	if request.method == 'POST':
 		quote = request.POST['quote'] 
-		# quote = quote.lower()
+		quote = quote.upper()
 
 		# By ID #
 		if quote == "10002101":
