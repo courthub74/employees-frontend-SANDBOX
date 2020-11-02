@@ -22,7 +22,6 @@ def frontdoor(request):
 		return render(request, "authenticate/frontdoor.html", {})
 
 
-
 #LOGGED IN
 def logged(request):
 	return render(request, "authenticate/logged.html", {})
@@ -35,7 +34,6 @@ def logout_user(request):
 	return redirect('frontdoor')
 
 		
-
 #HOME
 def emp1(request):
 	import requests
@@ -44,12 +42,47 @@ def emp1(request):
 	if request.method == 'POST':
 		quote = request.POST['quote']
 		quote = quote.upper() 
+
+
+	# By Depts.
+		if quote == "DEVELOPERS":
+
+			#Lead Developer
+			employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/19/?format=json")
+			direct4 = json.loads(employee4.content)
+			
+			employee5 = requests.get("http://nexcouremployees.courdevelops.com/employees/20/?format=json")
+			direct5 = json.loads(employee5.content)
+
+			employee6 = requests.get("http://nexcouremployees.courdevelops.com/employees/21/?format=json")
+			direct6 = json.loads(employee6.content)
+
+			employee7 = requests.get("http://nexcouremployees.courdevelops.com/employees/22/?format=json")
+			direct7 = json.loads(employee7.content)
+
+			employee8 = requests.get("http://nexcouremployees.courdevelops.com/employees/24/?format=json")
+			direct8 = json.loads(employee8.content)
+
+			employee9 = requests.get("http://nexcouremployees.courdevelops.com/employees/25/?format=json")
+			direct9 = json.loads(employee9.content)
+
+			employee10 = requests.get("http://nexcouremployees.courdevelops.com/employees/26/?format=json")
+			direct10 = json.loads(employee10.content)
+
+			employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
+			direct11 = json.loads(employee11.content)
+
+			return render(request, 'departments/devs.html', {'quote': quote, 'direct4': direct4, 'direct5': direct5, 'direct6': direct6,
+				'direct7': direct7, 'direct8': direct8, 'direct9': direct9, 'direct10': direct10, 'direct11': direct11})
+
+	#############################################################################################################
 		
+	# By Individuals
 
 		# By ID #
 		if quote == "10002101":
 			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
-			global direct1
+			# global direct1
 			direct1 = json.loads(employee1.content) 
 			return render(request, 'home1.html', {'quote': quote, 'direct1': direct1})
 
@@ -71,7 +104,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002102":
 			employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/17/?format=json")
-			global direct2
+			# global direct2
 			direct2 = json.loads(employee2.content)
 			return render(request, 'home2.html', {'quote': quote, 'direct2': direct2})
 
@@ -93,7 +126,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002103":
 			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/18/?format=json")
-			global direct3
+			# global direct3
 			direct3 = json.loads(employee3.content)
 			return render(request, 'home3.html', {'quote': quote, 'direct3': direct3})
 
@@ -115,7 +148,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002104":
 			employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/19/?format=json")
-			global direct4
+			# global direct4
 			direct4 = json.loads(employee4.content)
 			return render(request, 'home4.html', {'quote': quote, 'direct4': direct4})
 
@@ -136,7 +169,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002205":
 			employee5 = requests.get("http://nexcouremployees.courdevelops.com/employees/20/?format=json")
-			global direct5
+			# global direct5
 			direct5 = json.loads(employee5.content)
 			return render(request, 'home5.html', {'quote': quote, 'direct5': direct5})
 
@@ -147,7 +180,7 @@ def emp1(request):
 			return render(request, 'home5.html', {'quote': quote, 'direct5': direct5})
 
 		# By Job Title
-		# if quote == "Full Stack Development":
+		# if quote == "Developers":
 		# 	employee5 = requests.get("http://nexcouremployees.courdevelops.com/employees/20/?format=json")
 		# 	direct5 = json.loads(employee5.content)
 		# 	return render(request, 'home5.html', {'quote': quote, 'direct5': direct5})
@@ -157,7 +190,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002206":
 			employee6 = requests.get("http://nexcouremployees.courdevelops.com/employees/21/?format=json")
-			global direct6
+			# global direct6
 			direct6 = json.loads(employee6.content)
 			return render(request, 'home6.html', {'quote': quote, 'direct6': direct6})
 
@@ -178,7 +211,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002215":
 			employee7 = requests.get("http://nexcouremployees.courdevelops.com/employees/22/?format=json")
-			global direct7
+			# global direct7
 			direct7 = json.loads(employee7.content)
 			return render(request, 'home7.html', {'quote': quote, 'direct7': direct7})
 
@@ -199,7 +232,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002216":
 			employee8 = requests.get("http://nexcouremployees.courdevelops.com/employees/24/?format=json")
-			global direct8
+			# global direct8
 			direct8 = json.loads(employee8.content)
 			return render(request, 'home8.html', {'quote': quote, 'direct8': direct8})
 
@@ -221,7 +254,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002217":
 			employee9 = requests.get("http://nexcouremployees.courdevelops.com/employees/25/?format=json")
-			global direct9
+			# global direct9
 			direct9 = json.loads(employee9.content)
 			return render(request, 'home9.html', {'quote': quote, 'direct9': direct9})
 
@@ -243,7 +276,7 @@ def emp1(request):
 		# By ID #
 		if quote == "10002218":
 			employee10 = requests.get("http://nexcouremployees.courdevelops.com/employees/26/?format=json")
-			global direct10
+			# global direct10
 			direct10 = json.loads(employee10.content)
 			return render(request, 'home10.html', {'quote': quote, 'direct10': direct10})
 
