@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout 
-# from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib import messages
-# from .forms import SignUpForm, EditProfileForm
 
 
 #FRONTDOOR
@@ -191,12 +189,6 @@ def emp1(request):
 			direct5 = json.loads(employee5.content)
 			return render(request, 'home5.html', {'quote': quote, 'direct5': direct5})
 
-		# By Job Title
-		# if quote == "Developers":
-		# 	employee5 = requests.get("http://nexcouremployees.courdevelops.com/employees/20/?format=json")
-		# 	direct5 = json.loads(employee5.content)
-		# 	return render(request, 'home5.html', {'quote': quote, 'direct5': direct5})
-
 	#############################################################################################################	
 
 		# By ID #
@@ -211,12 +203,6 @@ def emp1(request):
 			employee6 = requests.get("http://nexcouremployees.courdevelops.com/employees/21/?format=json")
 			direct6 = json.loads(employee6.content)
 			return render(request, 'home6.html', {'quote': quote, 'direct6': direct6})
-
-		# By Job Title
-		# if quote == "Full Stack Development":
-		# 	employee6 = requests.get("http://nexcouremployees.courdevelops.com/employees/21/?format=json")
-		# 	direct6 = json.loads(employee6.content)
-		# 	return render(request, 'home6.html', {'quote': quote, 'direct6': direct6})	
 
 	#############################################################################################################	
 
@@ -233,12 +219,6 @@ def emp1(request):
 			direct7 = json.loads(employee7.content)
 			return render(request, 'home7.html', {'quote': quote, 'direct7': direct7})	
 
-		# By Job Title	
-		# if quote == "FRONT END DEVELOPER":
-		# 	employee7 = requests.get("http://nexcouremployees.courdevelops.com/employees/22/?format=json")
-		# 	direct7 = json.loads(employee7.content)
-		# 	return render(request, 'home7.html', {'quote': quote, 'direct7': direct7})	
-
 	#############################################################################################################
 
 		# By ID #
@@ -253,13 +233,6 @@ def emp1(request):
 			employee8 = requests.get("http://nexcouremployees.courdevelops.com/employees/24/?format=json")
 			direct8 = json.loads(employee8.content)
 			return render(request, 'home8.html', {'quote': quote, 'direct8': direct8})
-
-		# By Job Title
-		# if quote == "Back-end Development":
-		# 	employee8 = requests.get("http://nexcouremployees.courdevelops.com/employees/24/?format=json")
-		# 	direct8 = json.loads(employee8.content)
-		# 	return render(request, 'home8.html', {'quote': quote, 'direct8': direct8})
-
 
 	#############################################################################################################
 
@@ -276,13 +249,6 @@ def emp1(request):
 			direct9 = json.loads(employee9.content)
 			return render(request, 'home9.html', {'quote': quote, 'direct9': direct9})
 
-		# By Job Title
-		# if quote == "Front-end Development":
-		# 	employee9 = requests.get("http://nexcouremployees.courdevelops.com/employees/25/?format=json")
-		# 	direct9 = json.loads(employee9.content)
-		# 	return render(request, 'home9.html', {'quote': quote, 'direct9': direct9})
-
-
 	#############################################################################################################
 
 		# By ID #
@@ -298,14 +264,6 @@ def emp1(request):
 			direct10 = json.loads(employee10.content)
 			return render(request, 'home10.html', {'quote': quote, 'direct10': direct10})
 
-
-		# By Job Title
-		# if quote == "Junior Full Stack":
-		# 	employee10 = requests.get("http://nexcouremployees.courdevelops.com/employees/26/?format=json")
-		# 	direct10 = json.loads(employee10.content)
-		# 	return render(request, 'home10.html', {'quote': quote, 'direct10': direct10})
-
-
 	#############################################################################################################
 
 		# By ID #
@@ -320,16 +278,6 @@ def emp1(request):
 			employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
 			direct11 = json.loads(employee11.content)
 			return render(request, 'home11.html', {'quote': quote, 'direct11': direct11})
-
-
-		# By Job Title
-		# if quote == "Junior Front-end":
-		# 	employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
-		# 	direct11 = json.loads(employee11.content)
-		# 	return render(request, 'home11.html', {'quote': quote, 'direct11': direct11})
-
-
-
 
 	#############################################################################################################
 
