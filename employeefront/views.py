@@ -46,7 +46,7 @@ def emp1(request):
 
 	# By Depts.
 
-		if quote == "EXECUTIVE":
+		if quote == "EXECUTIVES":
 
 			#CEO
 			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
