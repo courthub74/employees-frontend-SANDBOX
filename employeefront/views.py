@@ -11,7 +11,7 @@ def frontdoor(request):
 		user = authenticate(request, username=username, password=password)
 		if user is not None:
 			login(request, user)
-			messages.success(request, ('Successful Login'))
+			messages.success(request, ('is Logged in'))
 			return redirect('logged')
 		else:
 			messages.success(request, ('Error Logging In - Please Try Again...'))
@@ -28,8 +28,13 @@ def logged(request):
 #LOGOUT
 def logout_user(request):
 	logout(request)
-	messages.success(request, ('You Have Been Logged Out'))
+	messages.success(request, ('NexCour Acct Has Been Logged Out'))
 	return redirect('frontdoor')
+
+
+#ACCOUNT
+def user_acct(request):
+	return render(request, "account/acct.html", {})
 
 		
 #HOME
@@ -55,16 +60,16 @@ def emp1(request):
 			#CTO
 			employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/18/?format=json")
 			direct3 = json.loads(employee3.content)
-
+			#CFO
 			employee12 = requests.get("http://nexcouremployees.courdevelops.com/employees/28/?format=json")
 			direct12 = json.loads(employee12.content)
-
+			#CCO
 			employee13 = requests.get("http://nexcouremployees.courdevelops.com/employees/29/?format=json")
 			direct13 = json.loads(employee13.content)
-
+			#CISO
 			employee14 = requests.get("http://nexcouremployees.courdevelops.com/employees/30/?format=json")
 			direct14 = json.loads(employee14.content)
-
+			#CMO
 			employee15 = requests.get("http://nexcouremployees.courdevelops.com/employees/31/?format=json")
 			direct15 = json.loads(employee15.content)
 

@@ -14,10 +14,13 @@
 
 
           <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <a class="navbar-brand" href="#">NexCour Inc.</a>
+            <a class="navbar-brand" href="{% url 'home' %}">NexCour Inc.</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
+
+
+            
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
@@ -44,53 +47,27 @@
             </div>
           </nav>
 
-
-
 {% block content %}
 
-	<br><br>
+<div class="container">
 
-				<div class="container">
-					{% if messages %}
-						{% for message in messages %}
-							<div class="alert alert-primary alert-dismissable" role="alert">
-								<button class="close" data-dismiss="alert">
-									<small><sup>x</sup></small>
-								</button>
-								{{ user }} {{ message }}
-							</div>
-						{% endfor %}
-					{% endif %}
-				</div>
+  <br><br>
+  
 
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fp18cdn4static.sharpschool.com%2FUserFiles%2FServers%2FServer_410082%2FImage%2FDepartments%2FInformation%2520Technology%2FImages%2Finformation%2520technology.jpg&f=1&nofb=1">
 
-				<br>
-
-	<div class="container">
-
-		<p>You are logged in to the NexCour Directory</p>
-		<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbanner2.kisspng.com%2F20180203%2Fdxq%2Fkisspng-computer-programming-programmer-icon-design-softwa-coder-png-transparent-image-5a756d899b30b0.5759607015176451936357.jpg&f=1&nofb=1" width="350" height="200">
-		<br><br>
-		<p>Click below for each:</p>
-		<br>
-		<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Personnel</a>
-		<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Payroll</a>
-
-
-	</div>
-
+<h3>Account Info</h3><br>
+	<h5>User Name: <span class="badge badge-secondary">{{ user }}</span></h5>
+	<h5>Email: <span class="badge badge-secondary">{{ user.email }}</span></h5>
+	<br>
+	<a href="{% url 'home' %}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Home</a>
+</div>
 
 {% endblock %}
 
-
-<!-- Optional JavaScript -->
+  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-
-   </body>
-
-</html>
-
+  </body>
