@@ -355,7 +355,7 @@ def emp1(request):
 			return render(request, 'home14.html', {'quote': quote, 'direct14': direct14})
 
 		# By Name
-		if quote == "BRENDAY MARTANI":
+		if quote == "BRENDA MARTANI":
 			employee14 = requests.get("http://nexcouremployees.courdevelops.com/employees/30/?format=json")
 			direct14 = json.loads(employee14.content)
 			return render(request, 'home14.html', {'quote': quote, 'direct14': direct14})
