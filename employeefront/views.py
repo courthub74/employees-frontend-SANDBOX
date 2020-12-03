@@ -36,6 +36,26 @@ def logout_user(request):
 def user_acct(request):
 	return render(request, "account/acct.html", {})
 
+
+#PAYROLL
+def payroll(request):
+	return render(request, "payroll/payroll.html", {})
+
+#PAYROLL LOGIN PAGE
+def payroll_login(request):
+	if request.method == "POST":
+		pin_num = request.POST['paypin']
+		if pin_num == "4321":
+			messages.success(request, ('Logged in to Payroll'))
+			return render(request, "payroll/payroll.html", {})
+		else:
+			messages.success(request, ('Wrong Pin, Try Again'))
+			return render(request, "authenticate/paylogin.html", {})
+	else:
+		return render(request, "authenticate/paylogin.html", {})
+
+	
+
 		
 #HOME
 def emp1(request):

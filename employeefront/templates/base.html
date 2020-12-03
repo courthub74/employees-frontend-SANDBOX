@@ -67,7 +67,6 @@
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
-                    width: 100%;
                   }
                   .longer {
                     size: 20px;
@@ -75,19 +74,35 @@
                   .big{
                       width: 345px;
                   }
+                  #center1 {
+                    align-content: center;
+                  }
+                  .inputsize {
+                    width: 280px;
+                  }
                 </style>
 
-            <div class="col-md-5 offset-md-4 center">
+            <div class="container">
 
+            <div class="col-md-5 offset-md-4 center ml-auto">
+
+              
+      
                <h6>Personnel Search:</h6>
             
+
                 <form method="POST">
                   <div class="form-row">
                       
                     <div class="col">
                       {% csrf_token %}
 
-                      <input type="text" class="form-control big" placeholder="Enter: ID# | Name | Job Title or Dept." name="quote" autocomplete="off"><br>
+                      
+
+                        <input type="text" class="form-control big inputsize" placeholder="Enter: ID# or Name " name="quote" autocomplete="off"><br>
+
+                      
+
                     </div>
 
                     <div class="col">
@@ -97,6 +112,12 @@
               </div>
                 </form>
 
+              
+
+
+              </div>
+            </div>
+
                 <br><br><br>
 
               {% block content %}
@@ -105,7 +126,7 @@
 
               {% endblock %}
 
-        </div>
+        <!-- </div> -->
 
 
 

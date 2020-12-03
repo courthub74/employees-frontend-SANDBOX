@@ -20,7 +20,13 @@
 		.left {
 			position: absolute;
 			right: 600px;
-		}
+			}
+			.longer {
+		        size: 20px;
+		      }
+		      .big{
+		          width: 345px;
+		      }
 	</style>
 
 
@@ -28,9 +34,38 @@
 
 		<div class="container">
 
+		<div class="col-md-5 offset-md-4 center">
+
+      <!--<h6>Personnel Search:</h6>
+            
+                <form method="POST">
+                  <div class="form-row">
+                      
+                    <div class="col">
+                      {% csrf_token %}
+
+                      <input type="text" class="form-control big" placeholder="Enter: ID# | Name | Job Title or Dept." name="quote" autocomplete="off"><br>
+                    </div>
+
+                    <div class="col">
+                      <button type="submit" class="btn btn-sm active btn-primary">Submit</button>
+                    </div>
+
+              </div>
+                </form>
+
+                <br><br><br> -->
+
+      
+
+       
+
 			<h5>NexCour Programming Company</h5>
 
-				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-b9acd96ce9cbc1d063f309f2ee847e48&f=1&nofb=1" width="300" height="400">
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-b9acd96ce9cbc1d063f309f2ee847e48&f=1&nofb=1" width="300" height="400"> <br>
+
+				<a href="{% url 'paylogin' %}" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Click Here to Login to Payroll</a>
+		</div>
 		</div>
 
 

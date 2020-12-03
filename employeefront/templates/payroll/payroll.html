@@ -47,29 +47,125 @@
             </div>
           </nav>
 
-{% block content %}
+
+ {% block content %}
 
 <div class="container">
-
-  <br><br>
-  
-
-<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fp18cdn4static.sharpschool.com%2FUserFiles%2FServers%2FServer_410082%2FImage%2FDepartments%2FInformation%2520Technology%2FImages%2Finformation%2520technology.jpg&f=1&nofb=1">
-
-<h3>Account Info</h3><br>
-	<h5>User Name: <span class="badge badge-secondary">{{ user }}</span></h5>
-
-  {% if user.email %}
-	 <h5>Email: <span class="badge badge-secondary">{{ user.email }}</span></h5>
-  {% else %}
-    <h5>Email: <span class="badge badge-secondary">N/A</span></h5>
-  {% endif %}
-  
 	<br>
-	<a href="{% url 'home' %}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Home</a>
+	<h3>NexCour Payroll</h3>
+ <table class="table table-sm table-dark">
+  <thead>
+  	<tr class="table-active">
+  	  <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr class="bg-primary">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="bg-success">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="bg-warning">
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr class="bg-info">
+      <th scope="row">3</th>
+      <td>Larry the Bird</td>
+      <td>@twitter</td>
+      <td>somethin</td>
+    </tr>
+    <tr class="bg-danger">
+      <th scope="row">3</th>
+      <td>Larry the Bird</td>
+      <td>@twitter</td>
+      <td>somethin</td>
+    </tr>
+    <tr class="bg-primary">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="bg-success">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="bg-warning">
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr class="bg-info">
+      <th scope="row">3</th>
+      <td>Larry the Bird</td>
+      <td>@twitter</td>
+      <td>somethin</td>
+    </tr>
+    <tr class="bg-danger">
+      <th scope="row">3</th>
+      <td>Larry the Bird</td>
+      <td>@twitter</td>
+      <td>somethin</td>
+    </tr>
+    <tr class="bg-primary">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="bg-success">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="bg-warning">
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr class="bg-info">
+      <th scope="row">3</th>
+      <td>Larry the Bird</td>
+      <td>@twitter</td>
+      <td>somethin</td>
+    </tr>
+    <tr class="bg-danger">
+      <th scope="row">3</th>
+      <td>Larry the Bird</td>
+      <td>@twitter</td>
+      <td>somethin</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+	<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
 </div>
 
-{% endblock %}
+
+
+
+
+
+ {% endblock %}
+
 
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -9,4 +9,10 @@ urlpatterns = [
 
     #ACCOUNT INFO
     path('account/', views.user_acct, name="acct"),
+
+    #PAYROLL
+    path('payroll/', views.payroll, name="payroll"),
+
+    #PAYROLL LOGIN
+    path('paylogin/', views.payroll_login, name="paylogin"),
 ]

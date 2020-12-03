@@ -13,6 +13,9 @@
 		  top: 0px;
 		  z-index: -1;
 		}
+		.center {
+			align-content: center;
+		}
 	</style>
 
 
@@ -24,7 +27,7 @@
 
 		{% else %}
 
-			<div class="container">
+			<!-- <div class="container center">
 
 				<ul class="list-group">
 					  <li class="list-group-item list-group-item-primary"><b>NexCour Personnel</b></li>
@@ -42,7 +45,30 @@
 
 					<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
 
+			</div> -->
+
+
+		<div class="container center">
+			<div class="card center" style="width: 18rem;">
+			  <img src="{% static 'Photos/Head1.jpeg' %}" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">{{ direct1.name }}</h5>
+			    <p class="card-text"><small>{{ direct1.idcode }}</small></p>
+			  </div>
+			  <ul class="list-group list-group-flush">
+			    <li class="list-group-item"><b>Employee Type:</b> {{ direct1.emptype }}</li>
+			    <li class="list-group-item"><b>Employee Status:</b> {{ direct1.empstatus }}</li>
+			    <li class="list-group-item"><b>Date Started:</b> {{ direct1.datejoin }}</li>
+			    <li class="list-group-item"><b>Position:</b><br> {{ direct1.jobdescrp }}</li>
+			    <li class="list-group-item"><b>Branch:</b> {{ direct1.branch }}</li>
+			  </ul>
+
+			  <a href="{% url 'home' %}" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">Home</a>
+
 			</div>
+			
+			</div>
+		</div>
 
 				<br><br>
 
