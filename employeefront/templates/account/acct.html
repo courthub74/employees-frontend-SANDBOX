@@ -20,29 +20,40 @@
             </button>
 
 
+            <style type="text/css">
+              .center {
+                align-content: center;
+              }
+            </style>
+
+
             
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
 
-                <div class="btn-group">
+             
 
-                 <button type="button" class="btn btn-light ml-3" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <b>{{ user }}</b>
-                  </button>
+                  <ul class="navbar-nav ml-auto">
 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="{% url 'acct' %}">Account Info</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-              </div>
-            </div>
+                        <div class="btn-group">
 
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                </li> -->
-                
-              </ul>
+                         <button type="button" class="btn btn-sm btn-outline-light ml-3" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>{{ user }}</b>
+                          </button>
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'acct' %}">Account Info</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                      </div>
+                     </div>
+
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li> -->
+                    
+                  </ul>
+              
               
             </div>
           </nav>
@@ -53,9 +64,10 @@
 
   <br><br>
   
-
-<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fp18cdn4static.sharpschool.com%2FUserFiles%2FServers%2FServer_410082%2FImage%2FDepartments%2FInformation%2520Technology%2FImages%2Finformation%2520technology.jpg&f=1&nofb=1">
-
+<div class="container">
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fp18cdn4static.sharpschool.com%2FUserFiles%2FServers%2FServer_410082%2FImage%2FDepartments%2FInformation%2520Technology%2FImages%2Finformation%2520technology.jpg&f=1&nofb=1" width="300">
+</div>
+  <br>
 <h3>Account Info</h3><br>
 	<h5>User Name: <span class="badge badge-secondary">{{ user }}</span></h5>
 

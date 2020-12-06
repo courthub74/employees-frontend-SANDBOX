@@ -24,7 +24,7 @@
 		{% else %}
 
 
-		<ul class="list-group">
+		<!-- <ul class="list-group">
 			  <li class="list-group-item list-group-item-primary"><b>NexCour Personnel</b></li>
 			  <img src="{% static 'Photos/Dev2.jpg' %}" height="300">
 			  <li class="list-group-item"><b>Name:</b> {{ direct8.name }}</li>
@@ -40,7 +40,31 @@
 
 			<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
 
-				<br><br>
+				<br><br> -->
+
+
+		<div class="container center">
+				<div class="card center" style="width: 18rem;">
+					  <img src="{% static 'Photos/Dev2.jpg' %}" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">{{ direct8.name }}</h5>
+					    <p class="card-text"><small>{{ direct8.idcode }}</small></p>
+					  </div>
+					  <ul class="list-group list-group-flush">
+					    <li class="list-group-item"><b>Employee Type:</b> {{ direct8.emptype }}</li>
+					    <li class="list-group-item"><b>Employee Status:</b> {{ direct8.empstatus }}</li>
+					    <li class="list-group-item"><b>Date Started:</b> {{ direct8.datejoin }}</li>
+					    <li class="list-group-item"><b>Position:</b><br> {{ direct8.jobdescrp }}</li>
+					    <li class="list-group-item"><b>Branch:</b> {{ direct8.branch }}</li>
+					  </ul>
+
+					  <a href="{% url 'home' %}" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">Home</a>
+
+				</div>
+			
+			</div>
+
+			<br><br>
 
 		{% endif %}
 

@@ -9,12 +9,92 @@
 		.background {
 			background-color: black;
 		}
+		.carousel .item {
+		  height: 200px;
+		  width: 200px;
+		}
+
+		.item img {
+		    position: absolute;
+		    object-fit:cover;
+		    top: 0;
+		    left: 0;
+		    min-height: 200px;
+		}
 	</style>
 
 	
-	<div class="container">
+<div class="container">
 
-				<ul class="list-group">
+
+		<div class="card-group">
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Head1.jpeg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct1.name }}</h5>
+		      <p class="card-text">{{ direct1.jobdescrp }} | {{ direct1.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Head2.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct2.name }}</h5>
+		      <p class="card-text">{{ direct2.jobdescrp }} | {{ direct2.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Head3.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct3.name }}</h5>
+		      <p class="card-text">{{ direct3.jobdescrp }} | {{ direct3.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Emp10.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct12.name }}</h5>
+		      <p class="card-text">{{ direct12.jobdescrp }} | {{ direct12.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dir2.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct13.name }}</h5>
+		      <p class="card-text">{{ direct13.jobdescrp }} | {{ direct13.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Emp9.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct14.name }}</h5>
+		      <p class="card-text">{{ direct14.jobdescrp }} | {{ direct14.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/dev7.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct15.name }}</h5>
+		      <p class="card-text">{{ direct15.jobdescrp }} | {{ direct15.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		</div>
+
+
+			<br><br>
+
+			<div class="container">
+				<a href="{% url 'home' %}" class="btn btn-block btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+			</div>
+
+
+				<!-- <ul class="list-group">
 					  <li class="list-group-item list-group-item-primary"><b>NexCour Executive</b></li>
 				</ul>
 
@@ -96,12 +176,7 @@
 				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 				    <span class="sr-only">Next</span>
 				  </a>
-				</div>
-
-					<br>
-
-					<a href="{% url 'home' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
-
+				</div> -->			
 			</div>
 
 				<br><br>

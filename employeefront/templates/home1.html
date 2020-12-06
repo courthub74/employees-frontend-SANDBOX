@@ -48,29 +48,58 @@
 			</div> -->
 
 
-		<div class="container center">
-			<div class="card center" style="width: 18rem;">
-			  <img src="{% static 'Photos/Head1.jpeg' %}" class="card-img-top" alt="...">
-			  <div class="card-body">
-			    <h5 class="card-title">{{ direct1.name }}</h5>
-			    <p class="card-text"><small>{{ direct1.idcode }}</small></p>
-			  </div>
-			  <ul class="list-group list-group-flush">
-			    <li class="list-group-item"><b>Employee Type:</b> {{ direct1.emptype }}</li>
-			    <li class="list-group-item"><b>Employee Status:</b> {{ direct1.empstatus }}</li>
-			    <li class="list-group-item"><b>Date Started:</b> {{ direct1.datejoin }}</li>
-			    <li class="list-group-item"><b>Position:</b><br> {{ direct1.jobdescrp }}</li>
-			    <li class="list-group-item"><b>Branch:</b> {{ direct1.branch }}</li>
-			  </ul>
+			<div class="container center">
+				<div class="card center" style="width: 18rem;">
+					  <img src="{% static 'Photos/Head1.jpeg' %}" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">{{ direct1.name }}</h5>
+					    <p class="card-text"><small>{{ direct1.idcode }}</small></p>
+					  </div>
+					  <ul class="list-group list-group-flush">
+					    <li class="list-group-item"><b>Employee Type:</b> {{ direct1.emptype }}</li>
+					    <li class="list-group-item"><b>Employee Status:</b> {{ direct1.empstatus }}</li>
+					    <li class="list-group-item"><b>Date Started:</b> {{ direct1.datejoin }}</li>
+					    <li class="list-group-item"><b>Position:</b><br> {{ direct1.jobdescrp }}</li>
+					    <li class="list-group-item"><b>Branch:</b> {{ direct1.branch }}</li>
+					  </ul>
 
-			  <a href="{% url 'home' %}" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">Home</a>
+					  <a href="{% url 'home' %}" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">Home</a>
 
-			</div>
+				</div>
 			
 			</div>
+			
 		</div>
 
 				<br><br>
+
+
+			<div class="card-group center" style="width: 18rem;">
+			  <div class="card center" style="width: 18rem;">
+			    <img src="..." class="card-img-top" alt="...">
+			    <div class="card-body">
+			      <h5 class="card-title">Card title</h5>
+			      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+			      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <img src="..." class="card-img-top" alt="...">
+			    <div class="card-body">
+			      <h5 class="card-title">Card title</h5>
+			      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+			      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <img src="..." class="card-img-top" alt="...">
+			    <div class="card-body">
+			      <h5 class="card-title">Card title</h5>
+			      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+			      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			    </div>
+			  </div>
+			</div>
 
 			
 
