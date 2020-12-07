@@ -146,7 +146,8 @@ def emp1(request):
 		if quote == "CEO":
 			employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
 			direct1 = json.loads(employee1.content)
-			return render(request, 'home1.html', {'quote': quote, 'direct1': direct1})		
+			return render(request, 'home1.html', {'quote': quote, 'direct1': direct1})
+
 
 
 	#############################################################################################################	
@@ -422,6 +423,22 @@ def emp1(request):
 		nothingyet = "NexCour Employee Database:"
 		# For Portfolio just say:  These particular employees work for this ficticious company.  Enter either their ID or Name to get more info
 		return render(request, 'home.html', {'nothingyet': nothingyet})
+
+
+
+
+	#############################################################################################################
+
+#Render to Payroll
+
+#CEO
+def payroll(request):
+	import requests
+	import json
+
+	employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
+	direct1 = json.loads(employee1.content) 
+	return render(request, 'payroll/payroll.html', {'direct1': direct1})	
 
 
 
