@@ -78,7 +78,10 @@
                     align-content: center;
                   }
                   .inputsize {
-                    width: 280px;
+                    width: 250px;
+                  }
+                  #white {
+                    color: white;
                   }
                 </style>
 
@@ -88,28 +91,45 @@
 
               
       
-               <h6>Personnel Search:</h6>
+               <h6>Search Personnel:</h6>
             
 
                 <form method="POST">
                   <div class="form-row">
-                      
+
+
                     <div class="col">
                       {% csrf_token %}
 
                       
+                      <div class="row">
 
-                        <input type="text" class="form-control big inputsize" placeholder="Enter: ID# or Name " name="quote" autocomplete="off"><br>
+                        <input type="text" class="form-control inputsize" size="6" placeholder="Type ID# or Name " name="quote" autocomplete="off">
+                        <div class="col">
+                          <button type="submit" class="btn btn-sm btn-primary active">Submit</button>
+                        </div>
+                        <br><br><br>
+                      </div>
 
+                      <h6>Search Department:</h6>
+
+                      <div class="row">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+                          <button name="quote" class="btn btn-outline-primary" value="Executives">Executives</button>
+                          <button name="quote" class="btn btn-outline-primary" value="Developers">Developers</button>
+                        </div>
+                      </div>
+                      
+                    
                       
 
                     </div>
 
-                    <div class="col">
+                   <!--  <div class="col">
                       <button type="submit" class="btn btn-sm active btn-primary">Submit</button>
-                    </div>
+                    </div> -->
 
-              </div>
+                  </div>
                 </form>
 
               

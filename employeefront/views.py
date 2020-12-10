@@ -39,22 +39,92 @@ def user_acct(request):
 
 #PAYROLL
 def payroll(request):
-	return render(request, "payroll/payroll.html", {})
+	import requests
+	import json
 
+	#CEO
+	employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
+	direct1 = json.loads(employee1.content) 
+
+	#COO
+	employee2 = requests.get("http://nexcouremployees.courdevelops.com/employees/17/?format=json")
+	direct2 = json.loads(employee2.content)
+
+	#CTO
+	employee3 = requests.get("http://nexcouremployees.courdevelops.com/employees/18/?format=json")
+	direct3 = json.loads(employee3.content)
+
+	#A.VOSIV - LEAD DEVELOPER
+	employee4 = requests.get("http://nexcouremployees.courdevelops.com/employees/19/?format=json")
+	direct4 = json.loads(employee4.content)
+
+	#R.PRASAD - SR. FULL STACK
+	employee5 = requests.get("http://nexcouremployees.courdevelops.com/employees/20/?format=json")
+	direct5 = json.loads(employee5.content)
+
+	#S.OWENS - FULL STACK
+	employee6 = requests.get("http://nexcouremployees.courdevelops.com/employees/21/?format=json")
+	direct6 = json.loads(employee6.content)
+
+	#D.SMITH - FRONT END DESIGN
+	employee7 = requests.get("http://nexcouremployees.courdevelops.com/employees/22/?format=json")
+	direct7 = json.loads(employee7.content)
+
+	#F.GATES - BACK END DEVELOPER
+	employee8 = requests.get("http://nexcouremployees.courdevelops.com/employees/24/?format=json")
+	direct8 = json.loads(employee8.content)
+
+	#K.STARS - FRONT END DEVELOPER
+	employee9 = requests.get("http://nexcouremployees.courdevelops.com/employees/25/?format=json")
+	direct9 = json.loads(employee9.content)
+
+	#M.THOMPSON - JR FULL STACK
+	employee10 = requests.get("http://nexcouremployees.courdevelops.com/employees/26/?format=json")
+	direct10 = json.loads(employee10.content)
+
+	#R.MOLEY - JR FRONT END DEVELOPER
+	employee11 = requests.get("http://nexcouremployees.courdevelops.com/employees/27/?format=json")
+	direct11 = json.loads(employee11.content)
+
+	#E.RICKETS - CFO
+	employee12 = requests.get("http://nexcouremployees.courdevelops.com/employees/28/?format=json")
+	direct12 = json.loads(employee12.content)
+
+	#J.VAUGHN - CCO
+	employee13 = requests.get("http://nexcouremployees.courdevelops.com/employees/29/?format=json")
+	direct13 = json.loads(employee13.content)
+
+	#B.MARTANI - CISO
+	employee14 = requests.get("http://nexcouremployees.courdevelops.com/employees/30/?format=json")
+	direct14 = json.loads(employee14.content)
+
+	#M.FONTANA - CMO
+	employee15 = requests.get("http://nexcouremployees.courdevelops.com/employees/31/?format=json")
+	direct15 = json.loads(employee15.content)
+
+	#TOTALS
+	tot1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
+	totals = json.loads(tot1.content)
+
+	return render(request, 'payroll/payroll.html', {'direct1': direct1, 'direct2': direct2, 'direct3': direct3, 'direct4': direct4,
+		'direct5': direct5, 'direct6': direct6, 'direct7': direct7, 'direct8': direct8, 'direct9': direct9, 'direct10': direct10,
+		'direct11': direct11, 'direct12': direct12, 'direct13': direct13, 'direct14': direct14, 'direct15': direct15, 'totals': totals})
+
+	
 #PAYROLL LOGIN PAGE
 def payroll_login(request):
 	if request.method == "POST":
 		pin_num = request.POST['paypin']
 		if pin_num == "4321":
 			messages.success(request, ('Logged in to Payroll'))
-			return render(request, "payroll/payroll.html", {})
+			return redirect('payroll')
+			# return render(request, "payroll/payroll.html", {})
 		else:
 			messages.success(request, ('Wrong Pin, Try Again'))
-			return render(request, "authenticate/paylogin.html", {})
+			return redirect('paylogin')
+			# return render(request, "authenticate/paylogin.html", {})
 	else:
 		return render(request, "authenticate/paylogin.html", {})
-
-	
 
 		
 #HOME
@@ -429,16 +499,8 @@ def emp1(request):
 
 	#############################################################################################################
 
-#Render to Payroll
 
-#CEO
-def payroll(request):
-	import requests
-	import json
 
-	employee1 = requests.get("http://nexcouremployees.courdevelops.com/employees/16/?format=json")
-	direct1 = json.loads(employee1.content) 
-	return render(request, 'payroll/payroll.html', {'direct1': direct1})	
 
 
 

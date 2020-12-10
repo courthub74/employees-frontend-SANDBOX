@@ -9,10 +9,103 @@
 		.background {
 			background-color: black;
 		}
+		.header {
+			background-color: grey;
+			color: white;
+			text-align: center;
+		}
 	</style>
 
-	
 	<div class="container">
+
+				
+
+		<div class="container">
+			<div class="card center header">
+				  <div class="card-body">
+				    <h6>NexCour Developers</h6>
+				  </div>
+				</div>
+			</div>
+			<br>
+		<div class="card-group">
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/DevFull.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct4.name }}</h5>
+		      <p class="card-text">{{ direct4.jobdescrp }} | {{ direct4.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dev5.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct5.name }}</h5>
+		      <p class="card-text">{{ direct5.jobdescrp }} | {{ direct5.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dev6.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct6.name }}</h5>
+		      <p class="card-text">{{ direct6.jobdescrp }} | {{ direct6.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dev9.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct7.name }}</h5>
+		      <p class="card-text">{{ direct7.jobdescrp }} | {{ direct7.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dev2.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct8.name }}</h5>
+		      <p class="card-text">{{ direct8.jobdescrp }} | {{ direct8.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dev8.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct9.name }}</h5>
+		      <p class="card-text">{{ direct9.jobdescrp }} | {{ direct9.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dev10.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct10.name }}</h5>
+		      <p class="card-text">{{ direct10.jobdescrp }} | {{ direct10.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		  <div class="card center" style="width: 18rem;">
+		    <img src="{% static 'Photos/Dev1.jpg' %}" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">{{ direct11.name }}</h5>
+		      <p class="card-text">{{ direct11.jobdescrp }} | {{ direct11.branch }}</p>
+		      <p class="card-text"><small class="text-muted">NexCour Inc.</small></p>
+		    </div>
+		  </div>
+		</div>
+
+
+			<br><br>
+
+			<div class="container">
+				<a href="{% url 'home' %}" class="btn btn-block btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+			</div>
+
+			<br><br>
+
+	
+	<!-- <div class="container">
 
 				<ul class="list-group">
 					  <li class="list-group-item list-group-item-primary"><b>NexCour Devs</b></li>
@@ -113,7 +206,7 @@
 			</div>
 
 				<br><br>
-
+ -->
 
 
 {% endblock %}
