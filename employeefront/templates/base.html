@@ -14,10 +14,24 @@
 
 
           <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">NexCour Inc.</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
+              </button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <form method="POST">
+                  {% csrf_token %}
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+                          <button name="quote" class="btn btn-sm btn-outline-light" value="Executives"><small>Executives</small></button>
+                          <button name="quote" class="btn btn-sm btn-outline-light" value="Developers"><small>Developers</small></button>
+                    </div>
+                    </form>
+               </ul>
+            
 
 
             
@@ -43,7 +57,8 @@
                 </li> -->
                 
               </ul>
-              
+
+              </div>
             </div>
           </nav>
 
@@ -111,14 +126,14 @@
                         <br><br><br>
                       </div>
 
-                      <h6>Search Department:</h6>
+                    <!--   <h6>Search Department:</h6>
 
                       <div class="row">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
                           <button name="quote" class="btn btn-outline-primary" value="Executives">Executives</button>
                           <button name="quote" class="btn btn-outline-primary" value="Developers">Developers</button>
                         </div>
-                      </div>
+                      </div> -->
                       
                     
                       
